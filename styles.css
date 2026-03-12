@@ -8,10 +8,25 @@ body {
   flex-direction: column;
   justify-content: center;
   height: 100%;
+  position: relative;
+}
+
+.ball {
+  position: fixed;
+  width: 750px;
+  height: 750px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ff90a0, #ff40a0);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
 }
 
 main {
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 #datetime {
@@ -24,5 +39,7 @@ main {
 body {
   background-color: #ffffff;
   opacity: 1;
-  background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #ffffff 40px ), repeating-linear-gradient( #FAF0E655, #FAF0E6 );
+  background-image:
+    repeating-radial-gradient(circle at 0 0, transparent 0, #ffffff 40px),
+    repeating-linear-gradient(#faf0e655, #faf0e6);
 }
